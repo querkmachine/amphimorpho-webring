@@ -2,7 +2,7 @@ export default [
   {
     id: "here",
     name: "Amphimorpho Webring",
-    url: "https://amphimorpho-webring.furrified.com/",
+    url: "https://noodle-r.ing/",
   },
   {
     id: "guide",
