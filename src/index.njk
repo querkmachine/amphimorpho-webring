@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://files.beeps.gay/one-stylesheet/one-stylesheet.css">
+  <style>
+    .page-bowl {
+      max-inline-size: 15rem;
+      margin: 0;
+    }
+    .page-heading {
+      margin-top: var(--space-3-4);
+    }
+    .page-wrapper {
+      container-type: inline-size;
+    }
+    .page-big-buttons {
+      display: flex;
+      gap: var(--space-5);
+      flex-direction: column;
+    }
+    @container (min-width: 26em) {
+      .page-big-buttons {
+        flex-direction: row;
+      }
+    }
+    .page-big-buttons a {
+      flex: 1 1 50%;
+      display: block;
+      padding: var(--space-4-5);
+      border: 1px solid var(--color-link);
+      text-decoration: none;
+      text-align: center;
+    }
+    .page-big-buttons a:hover {
+      background-color: var(--color-link-underline);
+    }
+    pre code {
+      white-space: pre;
+      overflow-x: auto;
+    }
+  </style>
+  <title>{{ meta.webringName }}</title>
+</head>
+<body>
+  <div class="page-wrapper">
+    <img class="page-bowl" src="/assets/bowl.png" role="presentation">
+    <h1 class="page-heading">{{ meta.webringName }}</h1>
+    <p>A webring for folks who are <a href="https://amphimorpho.carrd.co/">amphimorpho</a>, a fictional shapeshifting species created by <a href="https://tuxedodragon.art/">Tuxedo Dragon</a>.</p>
+    <p>Ring created and managed by <a href="https://beeps.website">beeps</a>.</p>
+  
+    <div class="page-big-buttons">
+      <a href="{{ meta.webringDomain }}/here/prev">&larr; Previous</a>
+      <a href="{{ meta.webringDomain }}/here/next">Next &rarr;</a>
+    </div>
+  
+    <h2>Sites in the ring</h2>
+    <ol>
+      {%- for item in webring %}
+      <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+      {%- endfor %}
+    </ol>
+  
+    <h2>Joining the ring</h2>
+    <p>If you're comfortable with coding and GitHub, you can <a href="https://github.com/querkmachine/amphimorpho-webring/edit/main/src/_data/webring.mjs">create a pull request to add yourself to the ring</a>. Otherwise, <a href="//beeps.website/contact/">contact beeps</a> and it'll add you manually.</p>
+    <p>An <code>id</code>, <code>name</code> and <code>url</code> are required for all entries. <code>id</code>s must be unique, but can otherwise be whatever you want. They cannot contain forward slash characters, even URL encoded ones.</p>
+    
+    <h3>Rules of the ring</h3>
+    <ol>
+      <li><strong>You must link to the webring from your website</strong>, naturally. The homepage is preferred for quick navigation of the ring, but any page will do.</li>
+      <li><strong>Don't redirect off the ring.</strong> The whole point of a webring is that it's an unbroken chain of related websites. Breaking the chain will get you booted.</li>
+      <li><strong>Don't be a dick.</strong> I reserve the right to kick you out of the ring for any reason.</li>
+    </ol>
+  
+    <h3>Linking to the ring</h3>
+    <p>Use code like the below to link to the next and previous sites in the ring. Style it up however you like so that it fits your site's vibes.</p>
+    <pre><code tabindex="0">&lt;a href="{{ meta.webringDomain }}"&gt;{{ meta.webringName }}&lt;/a&gt;
+&lt;a href="{{ meta.webringDomain }}/&lt;YOUR-ID-HERE&gt;/prev"&gt;Previous&lt;/a&gt;
+&lt;a href="{{ meta.webringDomain }}/&lt;YOUR-ID-HERE&gt;/next"&gt;Next&lt;/a&gt;</code></pre>
+  </div>
+</body>
+</html>
