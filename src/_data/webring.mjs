@@ -11,7 +11,7 @@ export default [
   },
   {
     id: "tuxedodragon",
-    name: "Tuxedo Dragon",
+    name: "TuxedoDragon",
     url: "https://tuxedodragon.art/",
   },
   {
