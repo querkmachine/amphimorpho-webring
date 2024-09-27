@@ -1,0 +1,54 @@
+name: Build and deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/**"
+      - "eleventy.config.mjs"
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build website
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
+      - name: Install dependencies
+        uses: ./.github/workflows/actions/install-dependencies
+      - name: Build site
+        run: npm run build
+      - name: Save artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: noodlering
+          path: _site
+          retention-days: 1
+  deploy:
+    name: Deploy to server
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: noodlering
+      - name: Upload files
+        uses: up9cloud/action-rsync@v1.4
+        env:
+          HOST: ${{ secrets.FTP_HOST }}
+          USER: ${{ secrets.FTP_USER }}
+          PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          TARGET: ${{ secrets.FTP_PRODUCTION_PATH }}
+          ARGS: -avP --compress --delete-after --human-readable
