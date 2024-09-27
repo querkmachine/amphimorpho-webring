@@ -24,4 +24,9 @@ export default [
     name: "Dook Zone",
     url: "https://www.dook.zone/",
   },
+  {
+    id: "glacialskyfarer",
+    name: "noodle ::3",
+    url: "https://glacial-skyfarer.neocities.org/",
+  }
 ];
