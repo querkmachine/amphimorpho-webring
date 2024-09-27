@@ -5,11 +5,6 @@ export default [
     url: "https://noodle-r.ing/",
   },
   {
-    id: "guide",
-    name: "Amphimorpho species guide",
-    url: "https://amphimorpho.carrd.co/",
-  },
-  {
     id: "tuxedodragon",
     name: "TuxedoDragon",
     url: "https://tuxedodragon.art/",
