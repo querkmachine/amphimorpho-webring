@@ -3,6 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta property="og:url" content="{{ meta.webringDomain }}">
+  <meta property="og:locale" content="en">
+  <meta property="og:title" content="{{ meta.webringName }}">
+  <meta property="og:site_name" content="{{ meta.webringName }}">
+  <meta property="og:image" content="{{ meta.webringDomain }}/assets/opengraph.png">
+  <meta property="og:type" content="website">
+  
+  <title>{{ meta.webringName }}</title>
+  <meta name="description" content="A webring for folks who are amphimorpho, a fictional shapeshifting species created by TuxedoDragon.">
+  
   <link rel="stylesheet" href="https://files.beeps.gay/one-stylesheet/one-stylesheet.css">
   <style>
     @font-face {
@@ -83,7 +94,6 @@
       margin-block-start: var(--space-7-8);
     }
   </style>
-  <title>{{ meta.webringName }}</title>
 </head>
 <body>
   <div class="page-wrapper">
