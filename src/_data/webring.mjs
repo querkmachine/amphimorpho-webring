@@ -19,4 +19,9 @@ export default [
     name: "Finch's Tales",
     url: "https://finchtale.neocities.org/",
   },
+  {
+    id: "milomarten",
+    name: "Dook Zone",
+    url: "https://www.dook.zone/",
+  },
 ];
