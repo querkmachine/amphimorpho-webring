@@ -28,5 +28,10 @@ export default [
     id: "glacialskyfarer",
     name: "noodle ::3",
     url: "https://glacial-skyfarer.neocities.org/",
-  }
+  },
+  {
+    id: "munsterlandr",
+    name: "Munsterlandr",
+    url: "https://www.munsterlandr.monster",
+  },
 ];
