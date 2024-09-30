@@ -6,7 +6,7 @@ export default [
   },
   {
     id: "tuxedodragon",
-    name: "TuxedoDragon",
+    name: "TuxedoDragon's Shapeshifter Shenanigans",
     url: "https://tuxedodragon.art/",
   },
   {
