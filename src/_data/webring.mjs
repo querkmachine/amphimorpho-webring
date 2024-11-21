@@ -34,4 +34,9 @@ export default [
     name: "Munsterlandr",
     url: "https://www.munsterlandr.monster",
   },
+  {
+    id: "kraaft",
+    name: "Kraaftersite",
+    url: "https://kraaftersite-v3.vercel.app/", //will be changed to kraafter.me once v2 is sunset
+  },
 ];
