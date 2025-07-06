@@ -17,7 +17,7 @@ export default [
   {
     id: "finch",
     name: "Finch's Tales",
-    url: "https://finchtale.neocities.org/",
+    url: "https://finchtale.ink/",
   },
   {
     id: "milomarten",
