@@ -39,4 +39,9 @@ export default [
     name: "Kraaftersite",
     url: "https://kraafter.me/",
   },
+  {
+    id: "maxsite",
+    name: "aMaxphous",
+    url: "https://amaxphous.neocities.org/"
+  },
 ];
