@@ -53,5 +53,10 @@ export default [
     id: "aftdawn",
     name: "AftDawn",
     url: "https://AftDawn.com/"
+  },
+  {
+    id: "warpthedragon",
+    name: "Warp's Critter Menagerie !",
+    url: "https://warpthedragon.art/"
   }
 ];
